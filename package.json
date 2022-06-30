@@ -1,0 +1,48 @@
+{
+    "name": "martian-popup-boilerplate",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@martiandao/aptos-web3-bip44.js": "^1.0.9",
+        "@testing-library/jest-dom": "^5.16.3",
+        "@testing-library/react": "^12.1.4",
+        "@testing-library/user-event": "^13.5.0",
+        "assert": "^2.0.0",
+        "axios": "^0.26.1",
+        "buffer": "^6.0.3",
+        "cross-fetch": "^3.1.5",
+        "fetch-adapter": "^0.2.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-horizontal-scrolling-menu": "^2.7.1",
+        "react-scripts": "5.0.0",
+        "stream": "^0.0.2",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            "chrome >= 67",
+            "edge >= 79",
+            "firefox >= 68",
+            "opera >= 54",
+            "safari >= 14"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

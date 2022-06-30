@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-container {
+  width: 400px;
+  height: 570px;
+  width: 360px;
+  height: 540px;
+  position: relative;
+}

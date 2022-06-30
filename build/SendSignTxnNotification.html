@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martian wallet</title>
+
+
+    <style>
+        .w-full {
+            width: 100%;
+        }
+
+        .h-full {
+            height: 100%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .justify-start {
+            justify-content: flex-start;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .items-end {
+            align-items: flex-end;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .items-baseline {
+            align-items: baseline;
+        }
+
+        .items-stretch {
+            align-items: stretch;
+        }
+
+        .self-auto {
+            align-self: auto;
+        }
+
+        .self-start {
+            align-self: flex-start;
+        }
+
+        .self-end {
+            align-self: flex-end;
+        }
+
+        .self-center {
+            align-self: center;
+        }
+
+        .self-stretch {
+            align-self: stretch;
+        }
+
+        .self-baseline {
+            align-self: baseline;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+        .text-gray {
+            color: #7b7b7b;
+        }
+
+        .text-lightgray {
+            color: #b1b1b1;
+        }
+
+        .topBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: auto;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 16px;
+            font-weight: 400;
+            height: 50px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #second_body {
+            background-color: #1C1C1C;
+            color: white;
+            height: 100vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 20px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #first_body {
+            background-color: #1C1C1C;
+            color: white;
+            height: 100vh;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto 0;
+            width: 100%;
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .middle {
+            margin: 30px 0px;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+            box-sizing: border-box;
+        }
+
+        #icon {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        #title {
+            margin: 0;
+            font-size: 25px;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            max-width: 275px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #url {
+            margin: 0;
+            font-size: 15px;
+            color: #8A8A8A;
+            margin-top: 5px;
+        }
+
+        .middle>p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #B3B3B3;
+        }
+
+        .middle>div {
+            margin: 0;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .middle>div>div {
+            width: 10px;
+            height: 10px;
+            background-color: #15D791;
+            border-radius: 50%;
+            margin-right: 7px;
+        }
+
+        .middle>div>p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            color: #FFFFFF;
+        }
+
+        body>p {
+            color: #7b7b7b;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        #cancelBtn {
+            width: 47%;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            color: #CCCCCC;
+
+            background: linear-gradient(103.69deg, rgba(255, 255, 255, 0.5) -40.6%, rgba(255, 255, 255, 0.2) 103.61%);
+            border-radius: 4px;
+        }
+
+        #approveBtn {
+            width: 47%;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            color: #1C1C1C;
+
+            background: linear-gradient(270deg, #35F46B 0%, #09F0E2 100%);
+            box-shadow: 6px 4px 18px rgb(0 255 163 / 15%), inset -15px 0px 31px rgb(6 109 66 / 15%), inset 15px 7px 40px rgb(8 210 137 / 50%);
+            border-radius: 4px;
+        }
+
+        #name {
+            color: #15d791;
+            font-size: 15px;
+            margin-left: 7px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+</body>
+<script src="SendSignTxnNotification.js"></script>
+<script src="./secureMnemonicBundle.js"></script>
+
+</html>

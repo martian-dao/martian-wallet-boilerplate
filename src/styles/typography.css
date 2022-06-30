@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+.ShareTechMonoFont {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-black {
+  color: #000;
+}
+.text-gray {
+  color: #7b7b7b;
+}
+.text-lightgray {
+  color: #b1b1b1;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-green {
+  color: #02cf8d;
+}
+.text-blue {
+  color: #1284d8;
+}
+
+.btn-solid:hover {
+  background: linear-gradient(270deg, #28bc52 0%, #04a399 100%) !important;
+}
+.btn-outline:hover {
+  background-color: rgba(184, 184, 184, 0.14) !important;
+}
+.gray-cont:hover {
+  background: linear-gradient(
+    103.69deg,
+    rgba(255, 255, 255, 0.14) -40.6%,
+    rgba(255, 255, 255, 0.04) 103.61%
+  ) !important;
+}

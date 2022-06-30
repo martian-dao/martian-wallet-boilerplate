@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95" height="85" fill="none" viewBox="0 0 95 85">
+  <g filter="url(#a)">
+    <rect width="95" height="85" fill="url(#b)" rx="4"/>
+  </g>
+  <path fill="#000" d="M23.647 54.294C17.214 54.294 12 49.08 12 42.647c0-6.432 5.214-11.646 11.647-11.646 6.432 0 11.646 5.214 11.646 11.646 0 6.433-5.214 11.647-11.646 11.647Zm-.472-14.785a1.059 1.059 0 0 0-1.646.881v4.514a1.06 1.06 0 0 0 1.646.881l3.385-2.257a1.06 1.06 0 0 0 0-1.762l-3.385-2.257Zm18.472-1.097a2.118 2.118 0 0 1 4.235 0v8.47a2.118 2.118 0 1 1-4.235 0v-8.47Zm9.53-5.295a2.117 2.117 0 0 1 4.235 0v19.06a2.118 2.118 0 0 1-4.236 0v-19.06Zm9.529 5.295a2.118 2.118 0 1 1 4.235 0v8.47a2.118 2.118 0 0 1-4.235 0v-8.47Zm19.059 0a2.118 2.118 0 1 1 4.235 0v8.47a2.118 2.118 0 0 1-4.235 0v-8.47Zm-9.53-5.295a2.117 2.117 0 0 1 4.235 0v19.06a2.118 2.118 0 0 1-4.235 0v-19.06Z"/>
+  <defs>
+    <linearGradient id="b" x1="95" x2="0" y1="42.5" y2="42.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35F46B"/>
+      <stop offset="1" stop-color="#09F0E2"/>
+    </linearGradient>
+    <filter id="a" width="125" height="92" x="-15" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dx="15" dy="7"/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+      <feColorMatrix values="0 0 0 0 0.0309375 0 0 0 0 0.825 0 0 0 0 0.539137 0 0 0 0.5 0"/>
+      <feBlend in2="shape" result="effect1_innerShadow_63_934"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dx="-15"/>
+      <feGaussianBlur stdDeviation="15.5"/>
+      <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+      <feColorMatrix values="0 0 0 0 0.0232465 0 0 0 0 0.429167 0 0 0 0 0.25868 0 0 0 0.15 0"/>
+      <feBlend in2="effect1_innerShadow_63_934" result="effect2_innerShadow_63_934"/>
+    </filter>
+  </defs>
+</svg>

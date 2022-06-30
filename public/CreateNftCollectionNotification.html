@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martian wallet</title>
+
+    <style>
+        .w-full {
+            width: 100%;
+        }
+
+        .h-full {
+            height: 100%;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .justify-start {
+            justify-content: flex-start;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .items-start {
+            align-items: flex-start;
+        }
+
+        .items-end {
+            align-items: flex-end;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .items-baseline {
+            align-items: baseline;
+        }
+
+        .items-stretch {
+            align-items: stretch;
+        }
+
+        .self-auto {
+            align-self: auto;
+        }
+
+        .self-start {
+            align-self: flex-start;
+        }
+
+        .self-end {
+            align-self: flex-end;
+        }
+
+        .self-center {
+            align-self: center;
+        }
+
+        .self-stretch {
+            align-self: stretch;
+        }
+
+        .self-baseline {
+            align-self: baseline;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+        .text-gray {
+            color: #7b7b7b;
+        }
+
+        .text-lightgray {
+            color: #b1b1b1;
+        }
+
+        .topBar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: auto;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 16px;
+            font-weight: 400;
+            height: 50px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #second_body {
+            background-color: #1C1C1C;
+            color: white;
+            height: 100vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 20px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #first_body {
+            background-color: #1C1C1C;
+            color: white;
+            height: 100vh;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto 0;
+            width: 100%;
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .middle {
+            margin: 30px 0px;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+            box-sizing: border-box;
+        }
+
+        #icon {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        #title {
+            margin: 0;
+            font-size: 25px;
+            font-weight: bold;
+            text-overflow: ellipsis;
+            max-width: 275px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #url {
+            margin: 0;
+            font-size: 15px;
+            color: #8A8A8A;
+            margin-top: 5px;
+        }
+
+        .middle>p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #B3B3B3;
+        }
+
+        .middle>div {
+            margin: 0;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .middle>div>div {
+            width: 10px;
+            height: 10px;
+            background-color: #15D791;
+            border-radius: 50%;
+            margin-right: 7px;
+        }
+
+        .middle>div>p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            color: #FFFFFF;
+        }
+
+        body>p {
+            color: #7b7b7b;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        #cancelBtn {
+            width: 47%;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            color: #CCCCCC;
+
+            background: linear-gradient(103.69deg, rgba(255, 255, 255, 0.5) -40.6%, rgba(255, 255, 255, 0.2) 103.61%);
+            border-radius: 4px;
+        }
+
+        #approveBtn {
+            width: 47%;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            color: #1C1C1C;
+
+            background: linear-gradient(270deg, #35F46B 0%, #09F0E2 100%);
+            box-shadow: 6px 4px 18px rgb(0 255 163 / 15%), inset -15px 0px 31px rgb(6 109 66 / 15%), inset 15px 7px 40px rgb(8 210 137 / 50%);
+            border-radius: 4px;
+        }
+
+        #name {
+            color: #15d791;
+            font-size: 15px;
+            margin-left: 7px;
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="top">
+            <img id="icon">
+            <p id="title">Approve Transaction</p>
+            <p id="url"></p>
+
+        </div>
+
+        <div class="middle">
+
+            <p>This app would like to:</p>
+            <div>
+                <div></div>
+                <p>Create a new NFT Collection named: <span id="name"></span></p>
+            </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14">
+                <path fill="#B3B3B3" fill-rule="evenodd"
+                    d="M7 0a7 7 0 1 0 0 14A7 7 0 0 0 7 0Zm1.732 10.14c-.722.68-1.237 1.104-1.574 1.296-.347.2-.63.296-.861.296a.687.687 0 0 1-.525-.21c-.13-.139-.194-.328-.194-.563 0-.664.382-2.225 1.167-4.77a.985.985 0 0 0 .047-.303h-.007a.566.566 0 0 0-.283.104c-.135.084-1.057.462-1.24.537a.13.13 0 0 1-.146-.21c.523-.574 1.008-.991 1.444-1.237.45-.253.825-.376 1.15-.376.195 0 .35.046.462.138a.494.494 0 0 1 .18.395c0 .104-.054.42-.509 1.941-.54 1.813-.813 2.915-.813 3.278 0 .044.01.078.03.104.006.01.012.016.016.02.142-.028.87-.35 1.51-.652a.13.13 0 0 1 .146.212Zm-.085-6.356c-.183.2-.394.302-.627.302a.64.64 0 0 1-.482-.203.72.72 0 0 1-.19-.516c0-.265.087-.494.258-.68a.83.83 0 0 1 .63-.287.66.66 0 0 1 .49.198.69.69 0 0 1 .191.498c0 .26-.09.49-.27.688Z"
+                    clip-rule="evenodd"></path>
+            </svg>
+
+            <p
+                style="margin: 0;margin-left: 5px;font-style: normal; font-weight: 400; font-size: 12px; line-height: 18px; color: #B3B3B3;">
+                Only connect to websites you trust
+            </p>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        <button id="cancelBtn">Cancel</button>
+        <button id="approveBtn">Connect</button>
+    </div>
+
+</body>
+<script src="CreateNftCollectionNotification.js"></script>
+<script src="./secureMnemonicBundle.js"></script>
+
+</html>
